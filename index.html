@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Weather App</title>
+	  <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="weather.css">
+		<link rel="stylesheet" type="text/css" href="weather.js">
+		<script src="weather.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	</head>
+	<body>
+		<div class="container">
+	  	<div class="row">
+	    	<div class="col-xs-12"><h1 class="text-center"><b>The Weather App</h1></div>
+	  	</div>
+		  <div class="row">
+		    <div class="col-xs-12"><h3 class="text-center"><b>Have a Good Day</h3></div>
+		  </div>
+		  <div class="row">
+		    <div class="col-xs-12"><h1 class="text-center"><b> Weather</h1></div>
+		  </div>
+		  <div class="row">
+		    <div class="col-xs-12 col-md-4"> <h1 class="text-center"><b>Localization</h1></div>
+		    <div class="col-xs-12 col-md-4"> <h1 class="text-center"><b>Sky</h1></div>
+		    <div class="col-xs-12 col-md-4"> <h1 class="text-center"><b>Wind</h1></div>
+		  </div>
+		  <div class="row">
+        <div class="col-xs-12"><p class="text-center">By <a target="blank" href="https://www.linkedin.com/in/albertuherrera/">Albert Herrera</p></a></div>
+ <button>Click Me</button>
+ <script type="text/javascript">
+ 	
+
+
+$(document).ready(function() {
+  $("button").click(function() {
+    $.ajax({
+      type: "GET",
+      dataType: "jsonp",
+      url: "http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=fdd8080861e53a80500472420b920290",
+      crossDomain: true,
+      success: function(response){
+      	var centigrades = response.main.temp- 273.15;
+      	var falsius = centigrades*1.8+32;
+  							console.log (response.name);
+  							console.log (response.sys.country);
+  							console.log(centigrades+"°C");
+  							console.log(falsius+"°F");
+  							console.log (response.wind.speed+" mph");
+  							console.log (response.clouds.all);
+							 }
+    });
+  });
+});
+
+
+
+
+ </script>
+
+		</div>
+	</body>
+</html>
