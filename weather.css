@@ -1,0 +1,45 @@
+.sun{
+	 background-image: url("https://s30.postimg.org/5ndrkq4vl/sun.jpg"); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;;
+}
+.night{
+	 background-image: url("https://s23.postimg.org/cf4n0sgmz/nightclear.jpg"); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;;
+}
+.cloud{
+	background-image: url("https://s23.postimg.org/6fnbgn47f/cloud.jpg"); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.cloudNight{
+	background-image: url("https://s24.postimg.org/h2umzfx51/cloud_Night.jpg"); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.rain{
+	background-image: url("https://s29.postimg.org/ssg6reujr/rain.jpg"); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.rainNight{
+	background-image: url("https://s30.postimg.org/ijwzbvbrl/rain_NIght.jpg"); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.container{
+	margin-top: 4%;
+}
