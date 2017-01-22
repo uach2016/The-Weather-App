@@ -13,9 +13,6 @@ $(document).ready(function(){
       crossDomain: true,
       async:false,
       success: function(response){
-        console.log(response.weather[0].description)
-        console.log(response.weather[0].rain)
-        console.log(response.weather[0].icon)
         var centigrades = JSON.stringify(Math.round(response.main.temp- 273.15));
         var falsius = JSON.stringify(Math.round(centigrades*1.8+32));
         var wind = JSON.stringify(response.wind.speed);  
